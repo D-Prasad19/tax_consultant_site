@@ -1,0 +1,143 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Prasad Consultancy | Tax, GST & Financial Advisory in Pimpri, Pune{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container hero-grid">
+        <!-- Left Column: Copy & Trust Metrics -->
+        <div class="hero-content">
+            <span class="hero-badge">⚡ Financial Year 2025-26 Tax Filing Active</span>
+            <h1 class="hero-title">Stress-Free Tax & GST Compliance for Individuals & Businesses</h1>
+            <p class="hero-subtitle">
+                Expert Income Tax Return (ITR) filing, GST registration, tax planning, and corporate compliance services based in Pimpri-Chinchwad, Pune. Maximize your tax savings legally.
+            </p>
+            <div class="hero-cta-group">
+                <a href="{% url 'contact' %}" class="btn-primary btn-large">Book Free Consultation</a>
+                <a href="{% url 'calculator' %}" class="btn-secondary btn-large">Calculate Tax Savings</a>
+            </div>
+            <div class="hero-trust-metrics">
+                <div class="metric-item">
+                    <span class="metric-number">20+</span>
+                    <span class="metric-label">Years Experience</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <span class="metric-number">2,500+</span>
+                    <span class="metric-label">Satisfied Clients</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric-item">
+                    <span class="metric-number">100%</span>
+                    <span class="metric-label">Data Accuracy</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Interactive Quick Tax Estimator Card -->
+        <div class="hero-calculator-card">
+            <div class="card-header">
+                <h3>⚡ Instant Tax Estimator</h3>
+                <p>Compare tax under Old vs. New Tax Regime (FY 2025-26)</p>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="annualIncome">Gross Annual Income (₹)</label>
+                    <input type="number" id="annualIncome" class="form-input" placeholder="e.g. 1200000" value="1200000">
+                </div>
+                <div class="form-group">
+                    <label for="deductions80C">Total Deductions (80C, 80D, HRA, etc.)</label>
+                    <input type="number" id="deductions80C" class="form-input" placeholder="e.g. 150000" value="150000">
+                </div>
+                <button type="button" id="calcTaxBtn" class="btn-primary btn-block">Compare Regimes</button>
+
+                <div class="tax-results-box">
+                    <div class="result-col">
+                        <span class="res-title">New Regime Tax</span>
+                        <span class="res-value" id="taxNewRegime">₹ 0</span>
+                    </div>
+                    <div class="result-col">
+                        <span class="res-title">Old Regime Tax</span>
+                        <span class="res-value" id="taxOldRegime">₹ 0</span>
+                    </div>
+                </div>
+                <div id="taxRecommendation" class="recommendation-badge">
+                    Enter income details to view tax breakdown.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Practice Areas / Services Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Comprehensive Solutions</span>
+            <h2>Our Core Practice Areas</h2>
+            <p>End-to-end financial, tax planning, and statutory audit services.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>ITR Filing & Tax Planning</h3>
+                <p>Optimized return filing for salaried individuals, freelancers, capital gains traders, and NRI taxpayers.</p>
+                <a href="{% url 'services' %}?topic=itr" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧾</div>
+                <h3>GST Compliance & Returns</h3>
+                <p>New GST registrations, monthly GSTR-1/3B filing, reconciliation, and GST audit representation.</p>
+                <a href="{% url 'services' %}?topic=gst" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Company Incorporation</h3>
+                <p>Pvt Ltd, LLP, Partnership, and OPC registration along with MSME/Udyam certificates.</p>
+                <a href="{% url 'services' %}?topic=business" class="card-link">Learn More &rarr;</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Tax Audit & Accounting</h3>
+                <p>Bookkeeping, internal audits, statutory tax audits, and balance sheet preparation.</p>
+                <a href="{% url 'services' %}?topic=audit" class="card-link">Learn More &rarr;</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us / Value Proposition Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="about-summary-grid">
+            <div class="about-summary-content">
+                <span class="section-tag">Why Prasad Consultancy</span>
+                <h2>Personalized Financial Care with Enterprise Quality</h2>
+                <p>
+                    Navigating complex Indian tax laws requires accuracy and proactive strategy. Prasad Consultancy delivers transparent, hassle-free compliance services designed to protect your hard-earned capital.
+                </p>
+                <ul class="feature-list">
+                    <li><strong>Dedicated Tax Experts:</strong> Direct consultation with experienced tax professionals.</li>
+                    <li><strong>Maximum Savings:</strong> Complete deduction utilization under Sections 80C, 80D, 24B, and 87A.</li>
+                    <li><strong>Audit Protection:</strong> Error-free filings backed by thorough verification.</li>
+                </ul>
+                <a href="{% url 'about' %}" class="btn-secondary">About Our Firm</a>
+            </div>
+            <div class="about-summary-cta-card">
+                <h3>Ready to File Your Returns?</h3>
+                <p>Check the required checklist or reach out for immediate assistance.</p>
+                <div class="cta-card-actions">
+                    <a href="{% url 'checklist' %}" class="btn-primary">View Document Checklist</a>
+                    <a href="{% url 'contact' %}" class="btn-outline">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

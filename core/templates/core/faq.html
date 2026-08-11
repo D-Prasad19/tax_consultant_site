@@ -1,0 +1,69 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Frequently Asked Questions | Prasad Consultancy{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-tag">Knowledge Base</span>
+        <h1>Frequently Asked Questions</h1>
+        <p>Get instant answers regarding Tax Regimes, GST Thresholds, and Filing Timelines.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container" style="max-width: 800px;">
+
+        <div class="faq-container">
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the difference between the Old and New Tax Regime?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The Old Tax Regime offers higher tax rates but allows exemptions and deductions under Sections 80C, 80D, HRA, and 24B. The New Tax Regime features lower slab rates with fewer deduction options, simplified for easier filing.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What documents are needed to file an Income Tax Return (ITR)?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Standard documents include Form 16 (for salaried professionals), Bank Account Statements, Annual Information Statement (AIS/TIS), and investment receipts (80C, 80D). You can check our interactive <a href="{% url 'checklist' %}">Document Checklist</a> for details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Who needs mandatory GST registration in India?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Businesses selling goods with an annual turnover exceeding ₹40 Lakhs (₹20 Lakhs for Special Category States) or service providers with turnover exceeding ₹20 Lakhs must register for GST. E-commerce sellers and interstate sellers require GST regardless of turnover.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What are the penalties for late ITR filing after the due date?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Filing a Belated Return under Section 234F attracts a fee up to ₹5,000 (reduced to ₹1,000 if total income is below ₹5 Lakhs), along with interest u/s 234A on any unpaid tax liabilities.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-5">
+            <p>Have a question that isn't answered above?</p>
+            <a href="{% url 'contact' %}" class="btn-secondary mt-2">Ask Our Experts Directly</a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

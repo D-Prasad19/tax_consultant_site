@@ -1,0 +1,83 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Our Services | Prasad Consultancy - Tax, GST & Audits{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-tag">Expert Financial Solutions</span>
+        <h1>Tailored Advisory for Every Need</h1>
+        <p>From individual salary earners to growing corporate enterprises, we handle end-to-end tax compliance.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="services-grid">
+
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Income Tax Filing (ITR)</h3>
+                <p>Expert return preparation for salaried employees, business owners, professionals, freelancers, and capital gains traders.</p>
+                <ul class="feature-list mt-2">
+                    <li>ITR 1 to ITR 4 Filing</li>
+                    <li>Capital Gains Optimization</li>
+                    <li>Notice Handling & Appeals</li>
+                </ul>
+                <a href="{% url 'contact' %}?topic=itr" class="btn-primary btn-block mt-3">Book ITR Advisory</a>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">🧾</div>
+                <h3>GST Registration & Returns</h3>
+                <p>Complete GST management including new registrations, monthly GSTR-1 & GSTR-3B filings, and reconciliation.</p>
+                <ul class="feature-list mt-2">
+                    <li>GST Registration & LUT Filing</li>
+                    <li>Monthly & Annual Returns</li>
+                    <li>Input Tax Credit (ITC) Matching</li>
+                </ul>
+                <a href="{% url 'contact' %}?topic=gst" class="btn-primary btn-block mt-3">Book GST Advisory</a>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Business Incorporation</h3>
+                <p>Turnkey registration services for Private Limited companies, LLPs, One Person Companies (OPC), and Partnership firms.</p>
+                <ul class="feature-list mt-2">
+                    <li>Pvt Ltd & LLP Registration</li>
+                    <li>MSME / Udyam Certification</li>
+                    <li>PAN / TAN & Bank Account Setup</li>
+                </ul>
+                <a href="{% url 'contact' %}?topic=business" class="btn-primary btn-block mt-3">Start Company Setup</a>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Tax Audit & Accounting</h3>
+                <p>Comprehensive bookkeeping, internal controls setup, financial statements preparation, and Tax Audit u/s 44AB.</p>
+                <ul class="feature-list mt-2">
+                    <li>Statutory Tax Audits</li>
+                    <li>Balance Sheet & P&L Drafting</li>
+                    <li>TDS Return Filings</li>
+                </ul>
+                <a href="{% url 'contact' %}?topic=audit" class="btn-primary btn-block mt-3">Request Audit Services</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Banner -->
+<section class="section-padding bg-light">
+    <div class="container text-center">
+        <h2>Unsure Which Plan Fits Your Needs?</h2>
+        <p class="mt-2 mb-4">Reach out directly to our consultants to evaluate your exact tax or business requirements.</p>
+        <a href="{% url 'contact' %}" class="btn-primary btn-large">Schedule Free Discovery Call</a>
+    </div>
+</section>
+{% endblock %}

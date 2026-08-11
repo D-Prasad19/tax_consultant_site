@@ -1,0 +1,86 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}GST & Income Tax Calculator | Prasad Consultancy{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <h1>Tax & Compliance Calculators</h1>
+        <p>Accurate, real-time GST and Income Tax estimates for FY 2025-26.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="calculator-grid">
+            <!-- Standalone GST Calculator -->
+            <div class="calc-box">
+                <div class="calc-box-header">
+                    <h2>📊 GST Calculator</h2>
+                    <p>Calculate Exclusive & Inclusive GST Amounts</p>
+                </div>
+                <div class="calc-box-body">
+                    <div class="form-group">
+                        <label for="gstAmount">Amount (₹)</label>
+                        <input type="number" id="gstAmount" class="form-input" placeholder="e.g. 10000" value="10000">
+                    </div>
+                    <div class="form-group">
+                        <label for="gstRate">GST Tax Rate (%)</label>
+                        <select id="gstRate" class="form-input">
+                            <option value="5">5% (Essential Goods/Services)</option>
+                            <option value="12">12% (Standard Rate 1)</option>
+                            <option value="18" selected>18% (Standard Rate 2)</option>
+                            <option value="28">28% (Luxury Goods)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>GST Calculation Type</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gstType" value="exclusive" checked> GST Exclusive (Add GST)</label>
+                            <label><input type="radio" name="gstType" value="inclusive"> GST Inclusive (Extract GST)</label>
+                        </div>
+                    </div>
+                    <button type="button" id="calcGstBtn" class="btn-primary btn-block">Calculate GST</button>
+
+                    <div class="calc-results-table mt-4">
+                        <div class="calc-row">
+                            <span>Net Amount:</span>
+                            <strong id="resNetAmount">₹ 10,000.00</strong>
+                        </div>
+                        <div class="calc-row">
+                            <span>CGST (Central):</span>
+                            <span id="resCgst">₹ 900.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span>SGST (State):</span>
+                            <span id="resSgst">₹ 900.00</span>
+                        </div>
+                        <div class="calc-row highlight">
+                            <span>Total GST Amount:</span>
+                            <strong id="resGstAmount">₹ 1,800.00</strong>
+                        </div>
+                        <div class="calc-row total">
+                            <span>Final Total Amount:</span>
+                            <strong id="resTotalAmount">₹ 11,800.00</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tax Consultation Assistance Card -->
+            <div class="calc-info-card">
+                <h3>Need Custom Tax Planning?</h3>
+                <p>Calculators provide standard estimates. Complex financial scenarios like capital gains, crypto transactions, business losses, or multiple properties require specialized advisory.</p>
+                <ul class="check-list">
+                    <li>✓ Capital Gains Tax Optimization</li>
+                    <li>✓ Business Expenditure Deductions</li>
+                    <li>✓ Advance Tax Calculation</li>
+                    <li>✓ Notice Management & Responses</li>
+                </ul>
+                <a href="{% url 'contact' %}?topic=advisory" class="btn-primary btn-block mt-3">Book Tax Advisory Session</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

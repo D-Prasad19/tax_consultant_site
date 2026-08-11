@@ -1,0 +1,235 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prasad Consultancy - Trusted Tax, GST, ITR Filing, and Financial Advisory Services in Pimpri-Chinchwad, Pune.">
+    <meta name="keywords" content="Tax Consultant Pune, ITR Filing Pimpri, GST Registration, Financial Advisor Pune, Prasad Consultancy">
+    <meta name="author" content="Prasad Consultancy">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prasadconsultancy.in/">
+    <meta property="og:title" content="Prasad Consultancy | Expert Tax & GST Compliance in Pune">
+    <meta property="og:description" content="Over 20 years of excellence in ITR Filing, GST Compliance, Business Setup & Tax Audits in Pimpri-Chinchwad, Pune.">
+    <meta property="og:image" content="https://prasadconsultancy.in{% static 'core/images/og-share-card.jpg' %}">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prasad Consultancy | Tax & Financial Advisory">
+    <meta name="twitter:description" content="Stress-free ITR & GST Compliance for Individuals and Businesses in Pune.">
+    <meta name="twitter:image" content="https://prasadconsultancy.in{% static 'core/images/og-share-card.jpg' %}">
+
+    <title>{% block title %}Prasad Consultancy | Tax & Financial Advisory in Pimpri, Pune{% endblock %}</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External Design System CSS -->
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+
+    {% block extra_css %}{% endblock %}
+
+    <!-- Local SEO Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AccountingService",
+      "name": "Prasad Consultancy",
+      "image": "{% static 'core/images/logo.png' %}",
+      "telePhone": "+91 94202 01981",
+      "email": "softt@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "B 101 Shree Vinayak Residency, Vaibhav Nagar",
+        "addressLocality": "Pimpri, Pune",
+        "addressRegion": "Maharashtra",
+        "postalCode": "411017",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 18.6298,
+        "longitude": 73.7997
+      },
+      "url": "{{ request.scheme }}://{{ request.get_host }}",
+      "priceRange": "₹₹",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Top Announcement & Quick Contact Bar -->
+    <div class="top-announcement-bar">
+        <div class="container top-bar-content">
+            <div class="top-info-left">
+                <span>📍 Pimpri-Chinchwad, Pune</span>
+                <span class="divider">|</span>
+                <span>📞 <a href="tel:+919420201981">+91 94202 01981</a></span>
+                <span class="divider">|</span>
+                <span>✉️ <a href="mailto:softt@gmail.com">softt@gmail.com</a></span>
+            </div>
+            <div class="top-info-right">
+                <span class="badge-status">🟢 Tax Filing Season Active</span>
+                <span class="office-hours">Mon - Sat: 10:00 AM - 6:00 PM</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pinned Header Navigation -->
+    <header class="site-header pinned-header">
+        <div class="container header-container">
+            <!-- Brand Logo -->
+            <a href="{% url 'index' %}" class="brand-logo">
+                <span class="logo-icon">📊</span>
+                <div class="logo-text">
+                    <span class="brand-name">PRASAD</span>
+                    <span class="brand-sub">CONSULTANCY</span>
+                </div>
+            </a>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Main Navigation Links -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}" class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'services' %}" class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'calculator' %}" class="nav-link {% if request.resolver_match.url_name == 'calculator' %}active{% endif %}">GST Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'checklist' %}" class="nav-link {% if request.resolver_match.url_name == 'checklist' %}active{% endif %}">Document Checklist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'faq' %}" class="nav-link {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a>
+                    </li>
+                    <li class="nav-item nav-cta-item">
+                        <a href="{% url 'contact' %}" class="btn-primary nav-cta-btn">Consult an Expert</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Dynamic Content Block -->
+    <main class="main-content" id="mainContent">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Mobile Bottom Sticky CTA Bar -->
+    <div class="mobile-sticky-bar">
+        <a href="tel:+919420201981" class="mobile-sticky-btn btn-call">
+            <span>📞</span> Call Now
+        </a>
+        <a href="https://wa.me/919420201981" target="_blank" rel="noopener" class="mobile-sticky-btn btn-whatsapp">
+            <span>💬</span> WhatsApp
+        </a>
+        <a href="{% url 'contact' %}" class="mobile-sticky-btn btn-consult">
+            <span>📋</span> Book Appointment
+        </a>
+    </div>
+
+    <!-- Master Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <!-- Col 1: About Firm -->
+            <div class="footer-col footer-about">
+                <div class="footer-brand">
+                    <span class="logo-icon">📊</span>
+                    <span class="footer-brand-title">Prasad Consultancy</span>
+                </div>
+                <p class="footer-desc">
+                    Leading financial, tax planning, GST compliance, and accounting advisory firm in Pimpri-Chinchwad, Pune. Over 20 years of experience delivering accurate taxation solutions.
+                </p>
+                <div class="footer-badges">
+                    <span class="badge-item">✓ Certified Tax Advisors</span>
+                    <span class="badge-item">✓ 100% Data Confidentiality</span>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'services' %}">Our Services</a></li>
+                    <li><a href="{% url 'calculator' %}">GST & Tax Calculators</a></li>
+                    <li><a href="{% url 'checklist' %}">ITR Document Vault</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'faq' %}">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Key Services -->
+            <div class="footer-col">
+                <h4 class="footer-title">Practice Areas</h4>
+                <ul class="footer-links">
+                    <li><a href="{% url 'services' %}?topic=itr">Income Tax Return (ITR) Filing</a></li>
+                    <li><a href="{% url 'services' %}?topic=gst">GST Registration & Filing</a></li>
+                    <li><a href="{% url 'services' %}?topic=business">Company Incorporation</a></li>
+                    <li><a href="{% url 'services' %}?topic=audit">Tax Audit & Compliance</a></li>
+                    <li><a href="{% url 'services' %}?topic=tds">TDS & Payroll Compliance</a></li>
+                    <li><a href="{% url 'services' %}?topic=advisory">Financial & Wealth Advisory</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Info -->
+            <div class="footer-col footer-contact">
+                <h4 class="footer-title">Office Location</h4>
+                <address class="footer-address">
+                    <p>📍 <strong>Prasad Consultancy</strong></p>
+                    <p>B 101 Shree Vinayak Residency, Vaibhav Nagar,</p>
+                    <p>Pimpri, Pune, MH - 411017</p>
+                    <p class="mt-2">📞 <strong>Phone:</strong> +91 94202 01981</p>
+                    <p>✉️ <strong>Email:</strong> softt@gmail.com</p>
+                </address>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p class="copyright-text">&copy; 2026 Prasad Consultancy. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="{% url 'privacy_policy' %}">Privacy Policy</a>
+                    <span class="sep">•</span>
+                    <a href="{% url 'terms' %}">Terms & Conditions</a>
+                    <span class="sep">•</span>
+                    <a href="{% url 'contact' %}">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main External JavaScript -->
+    <script src="{% static 'core/js/main.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

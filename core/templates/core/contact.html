@@ -1,0 +1,106 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}Contact Us | Prasad Consultancy - Pimpri, Pune{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-tag">Get In Touch</span>
+        <h1>Let's Discuss Your Tax Strategy</h1>
+        <p>Book a consultation, request a service quote, or visit our office in Pimpri, Pune.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <div class="hero-grid">
+
+            <div class="hero-calculator-card contact-form-wrap">
+                <div class="card-header">
+                    <h3>📩 Send Us a Message</h3>
+                    <p>Fill out the form below and our team will get back to you within 24 hours.</p>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            <label for="id_name">Full Name *</label>
+                            <input type="text" name="name" id="id_name" class="form-input" placeholder="e.g. Rahul Sharma" value="{{ form.name.value|default:'' }}" required>
+                            {% if form.name.errors %}<p class="field-error">{{ form.name.errors.0 }}</p>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_phone">Phone Number *</label>
+                            <input type="tel" name="phone" id="id_phone" class="form-input" placeholder="e.g. +91 98765 43210" value="{{ form.phone.value|default:'' }}" required>
+                            {% if form.phone.errors %}<p class="field-error">{{ form.phone.errors.0 }}</p>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_email">Email Address</label>
+                            <input type="email" name="email" id="id_email" class="form-input" placeholder="e.g. name@example.com" value="{{ form.email.value|default:'' }}">
+                            {% if form.email.errors %}<p class="field-error">{{ form.email.errors.0 }}</p>{% endif %}
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_topic">Service Requirement</label>
+                            <select name="topic" id="id_topic" class="form-input">
+                                <option value="general" {% if form.topic.value == "general" %}selected{% endif %}>General Tax Advisory</option>
+                                <option value="itr" {% if form.topic.value == "itr" %}selected{% endif %}>Income Tax Return (ITR)</option>
+                                <option value="gst" {% if form.topic.value == "gst" %}selected{% endif %}>GST Registration / Filing</option>
+                                <option value="business" {% if form.topic.value == "business" %}selected{% endif %}>Business Incorporation</option>
+                                <option value="audit" {% if form.topic.value == "audit" %}selected{% endif %}>Tax Audit & Accounting</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_message">Message / Details *</label>
+                            <textarea name="message" id="id_message" rows="4" class="form-input" placeholder="How can we assist you?" required>{{ form.message.value|default:'' }}</textarea>
+                            {% if form.message.errors %}<p class="field-error">{{ form.message.errors.0 }}</p>{% endif %}
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-block btn-large">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="about-summary-content">
+                <div class="service-card mb-4">
+                    <h3>📍 Office Location</h3>
+                    <p class="mt-2">
+                        <strong>Prasad Consultancy</strong><br>
+                        B 101 Shree Vinayak Residency,<br>
+                        Vaibhav Nagar, Pimpri,<br>
+                        Pune, Maharashtra - 411017
+                    </p>
+
+                    <div class="map-embed-container" style="margin-top: 16px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color);">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.751683416283!2d73.7975113!3d18.629811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b84cf288924b%3A0x6b49911e2f89c670!2sPimpri%2C%20Pune%2C%20Maharashtra%20411017!5e0!2m3!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            width="100%"
+                            height="220"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <a href="https://maps.google.com/?q=B+101+Shree+Vinayak+Residency,+Vaibhav+Nagar,+Pimpri,+Pune+-+411017" target="_blank" rel="noopener" class="card-link mt-3 display-block">
+                        Open Full View in Google Maps →
+                    </a>
+                </div>
+
+                <div class="service-card mb-4">
+                    <h3>📞 Reach Us Directly</h3>
+                    <p class="mt-2"><strong>Phone:</strong> <a href="tel:+919420201981" class="card-link">+91 94202 01981</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:softt@gmail.com" class="card-link">softt@gmail.com</a></p>
+                    <p><strong>Hours:</strong> Mon - Sat | 10:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

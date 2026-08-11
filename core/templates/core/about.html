@@ -1,0 +1,97 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}About Us | Prasad Consultancy - Tax & Financial Advisory in Pune{% endblock %}
+
+{% block content %}
+<!-- Page Hero -->
+<section class="page-header">
+    <div class="container text-center">
+        <span class="section-tag">Established & Trusted</span>
+        <h1>Over 20 Years of Financial Excellence</h1>
+        <p>Delivering accurate, transparent, and high-value tax and compliance advisory in Pimpri-Chinchwad, Pune.</p>
+    </div>
+</section>
+
+<!-- Main Narrative Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="about-summary-grid">
+            <div class="about-summary-content">
+                <span class="section-tag">Our Legacy</span>
+                <h2>Grounded in Accuracy, Built on Trust</h2>
+                <p>
+                    Founded in Pimpri, Prasad Consultancy has grown into a premier financial advisory firm serving over 2,500+ individual taxpayers, small-to-medium enterprises (SMEs), and corporate clients across Maharashtra.
+                </p>
+                <p>
+                    Our mission is simple: eliminate the stress of complex tax regulations, ensure strict statutory compliance, and maximize legal tax savings through proactive financial planning.
+                </p>
+
+                <div class="hero-trust-metrics mt-4">
+                    <div class="metric-item">
+                        <span class="metric-number">20+</span>
+                        <span class="metric-label">Years Experience</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-number">2,500+</span>
+                        <span class="metric-label">Clients Served</span>
+                    </div>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-number">100%</span>
+                        <span class="metric-label">Accuracy Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile / Info Highlight Card -->
+            <div class="hero-calculator-card">
+                <div class="card-header text-center">
+                    <h3>🏛️ Prasad Consultancy</h3>
+                    <p>Registered Financial & Tax Practitioners</p>
+                </div>
+                <div class="card-body">
+                    <ul class="feature-list">
+                        <li><strong>Head Office:</strong> B 101 Shree Vinayak Residency, Vaibhav Nagar, Pimpri, Pune - 411017</li>
+                        <li><strong>Contact:</strong> +91 94202 01981</li>
+                        <li><strong>Email:</strong> softt@gmail.com</li>
+                        <li><strong>Working Hours:</strong> Mon - Sat: 10:00 AM - 6:00 PM</li>
+                    </ul>
+                    <a href="{% url 'contact' %}" class="btn-primary btn-block mt-3">Schedule a Office Visit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values / Key Highlights Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-tag">Why Choose Us</span>
+            <h2>Our Core Operating Principles</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🛡️</div>
+                <h3>100% Compliance Assurance</h3>
+                <p>Every filing undergoes multi-tier verification to guarantee zero errors, avoiding unnecessary IT department notices.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Proactive Tax Planning</h3>
+                <p>We don't just file your returns at the end of the year; we help you structure investments throughout the year to save tax legally.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Swift Turnaround</h3>
+                <p>Streamlined digital documentation enables us to process and file ITRs and GST returns rapidly and error-free.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

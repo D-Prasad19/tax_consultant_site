@@ -1,0 +1,68 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}ITR Document Checklist | Prasad Consultancy{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container text-center">
+        <h1>ITR Document Vault & Checklist</h1>
+        <p>Gather the right documents before filing your income tax returns.</p>
+    </div>
+</section>
+
+<section class="section-padding">
+    <div class="container">
+        <!-- Interactive Category Switcher Tabs -->
+        <div class="doc-tabs">
+            <button class="doc-tab-btn active" data-target="salaried-docs">Salaried Employee</button>
+            <button class="doc-tab-btn" data-target="business-docs">Business & Freelancers</button>
+            <button class="doc-tab-btn" data-target="capital-docs">Capital Gains & Investments</button>
+        </div>
+
+        <!-- Tab 1: Salaried -->
+        <div class="doc-tab-content active" id="salaried-docs">
+            <div class="checklist-card">
+                <h3>Required Documents for Salaried Taxpayers</h3>
+                <ul class="checklist-items">
+                    <li><input type="checkbox" id="doc1"> <label for="doc1"><strong>Form 16 / Part A & B</strong> (Issued by Employer)</label></li>
+                    <li><input type="checkbox" id="doc2"> <label for="doc2"><strong>Annual Information Statement (AIS) & TIS</strong> (From Income Tax Portal)</label></li>
+                    <li><input type="checkbox" id="doc3"> <label for="doc3"><strong>Bank Account Statements</strong> (For interest income calculation)</label></li>
+                    <li><input type="checkbox" id="doc4"> <label for="doc4"><strong>Proof of Deductions (80C / 80D)</strong> (PPF, ELSS, Insurance, School Fees)</label></li>
+                    <li><input type="checkbox" id="doc5"> <label for="doc5"><strong>Housing Loan Interest Certificate</strong> (If claiming interest deduction u/s 24B)</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tab 2: Business -->
+        <div class="doc-tab-content" id="business-docs">
+            <div class="checklist-card">
+                <h3>Required Documents for Business & Professional Taxpayers</h3>
+                <ul class="checklist-items">
+                    <li><input type="checkbox" id="bdoc1"> <label for="bdoc1"><strong>Books of Accounts / Profit & Loss Statement & Balance Sheet</strong></label></li>
+                    <li><input type="checkbox" id="bdoc2"> <label for="bdoc2"><strong>GST Return Copies (GSTR-1 & GSTR-3B)</strong></label></li>
+                    <li><input type="checkbox" id="bdoc3"> <label for="bdoc3"><strong>Bank Statements of all Current and Savings Accounts</strong></label></li>
+                    <li><input type="checkbox" id="bdoc4"> <label for="bdoc4"><strong>TDS Certificates (Form 16A)</strong> for tax deducted by clients</label></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tab 3: Capital Gains -->
+        <div class="doc-tab-content" id="capital-docs">
+            <div class="checklist-card">
+                <h3>Required Documents for Capital Gains Taxpayers</h3>
+                <ul class="checklist-items">
+                    <li><input type="checkbox" id="cdoc1"> <label for="cdoc1"><strong>Annual Stock / Mutual Fund Capital Gain Statements</strong> (From Broking Apps)</label></li>
+                    <li><input type="checkbox" id="cdoc2"> <label for="cdoc2"><strong>Property Sale/Purchase Deeds</strong> (For real estate transactions)</label></li>
+                    <li><input type="checkbox" id="cdoc3"> <label for="cdoc3"><strong>Improvement Cost & Brokerage Receipts</strong></label></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="checklist-footer-cta mt-4 text-center">
+            <p>Have all your documents ready? Send them over for professional review.</p>
+            <a href="{% url 'contact' %}" class="btn-primary">Submit Documents for Filing</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

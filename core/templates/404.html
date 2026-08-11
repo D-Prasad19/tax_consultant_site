@@ -1,0 +1,17 @@
+{% extends "core/base.html" %}
+{% block title %}404 - Page Not Found | Prasad Consultancy{% endblock %}
+
+{% block content %}
+<section class="section-padding text-center" style="min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container" style="max-width: 600px;">
+        <div class="service-card" style="padding: 40px;">
+            <div style="font-size: 4rem; margin-bottom: 16px;">🔍</div>
+            <h1 class="hero-title" style="color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 10px;">Page Not Found</h1>
+            <p style="color: var(--text-muted); margin-bottom: 24px;">
+                The page you are looking for doesn't exist or may have been moved.
+            </p>
+            <a href="{% url 'index' %}" class="btn-primary">Back to Home</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
