@@ -1,14 +1,15 @@
 # 🏛️ Prasad Consultancy
 ### Modern Tax Advisory, Financial Compliance & GST Web Platform
 
-[![Live Platform](https://prasad-consultancy.onrender.com)
-[!(https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
-[![Django Version](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)](https://djangoproject.com)
-[![License](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)](LICENSE)
+![Live App Badge](https://img.shields.io/badge/Live_App-prasad--consultancy.onrender.com-D97706?style=for-the-badge&logo=render&logoColor=white)
+![Python Badge](https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)
+![Django Badge](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)
+![License Badge](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)
 
 A production-ready web platform for **Prasad Consultancy** (Pimpri, Pune) featuring dynamic tax regime estimators, real-time GST calculators, lead generation workflows, and a custom Charcoal & Bronze Gold corporate design system.
 
-👉 **[Explore Live Web App 🚀](https://prasad-consultancy.onrender.com)** | **[Report Issue 🐛](https://github.com/D-Prasad19/tax_consultant_site/issues)**
+👉 **Live Web App:** https://prasad-consultancy.onrender.com
+👉 **GitHub Repository:** https://github.com/D-Prasad19/tax_consultant_site
 
 ---
 
@@ -42,7 +43,7 @@ A production-ready web platform for **Prasad Consultancy** (Pimpri, Pune) featur
 
 ## 🚀 Quickstart & Local Setup
 
-1. **Clone the Repository:** Run the `git clone` command for `https://github.com/D-Prasad19/tax_consultant_site.git` in your terminal.
+1. **Clone the Repository:** Run `git clone https://github.com/D-Prasad19/tax_consultant_site.git` in your terminal.
 2. **Virtual Environment:** Create a `.venv` virtual environment and activate it.
 3. **Install Packages:** Install dependencies from `requirements.txt`.
 4. **Environment File:** Create a `.env` file with `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=True`, and `ALLOWED_HOSTS=127.0.0.1,localhost`.
