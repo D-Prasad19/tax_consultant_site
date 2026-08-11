@@ -1,0 +1,77 @@
+<div align="center">
+
+# 🏛️ Prasad Consultancy
+### Tax Compliance, Advisory & GST Web Platform
+
+[![Live Platform](https://img.shields.io/badge/Live_Demo-prasad--consultancy.onrender.com-D97706?style=for-the-badge&logo=render&logoColor=white)](https://prasad-consultancy.onrender.com)
+[![Python Version](https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Django Version](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)](https://djangoproject.com)
+[![License](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)](LICENSE)
+
+*A production-ready Django web application built for **Prasad Consultancy** (Pimpri, Pune) featuring dynamic tax regime estimators, real-time GST calculators, validated lead capture, and a Charcoal & Bronze Gold corporate design system.*
+
+[Explore Live Web App 🚀](https://prasad-consultancy.onrender.com) • [Report Issue 🐛](https://github.com/D-Prasad19/tax_consultant_site/issues)
+
+</div>
+
+---
+
+## 🌟 Key Features & Functional Modules
+
+### 🧮 1. Interactive Real-Time GST Calculator
+- Engine supporting both **GST Exclusive** and **GST Inclusive** tax breakdowns.
+- Real-time computing of CGST, SGST, Total Tax liability, and Gross Payable amounts.
+
+### 📊 2. Income Tax Regime Estimator (Old vs. New)
+- Comparative calculator evaluating gross annual income against eligible deductions (80C, 80D, HRA).
+- Recommends optimal tax regime with visual savings badges.
+
+### 📬 3. Validated Lead Generation & Inquiry System
+- Contact form equipped with custom regex phone validation and message length sanitization.
+- Automatic backend redirection to custom confirmation routing with data persistence in SQLite/PostgreSQL.
+
+### 🔐 4. Production Security Hardening
+- Built-in protection against **CSRF**, **XSS**, **Clickjacking**, and **SQL Injection**.
+- WhiteNoise static asset compression with dynamic environment configurations.
+
+### 🎨 5. Charcoal & Bronze Gold Design System
+- Luxury corporate palette optimized with dynamic CSS variables.
+- Fully responsive navigation overlay with mobile sticky call-to-action bars.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Backend Framework:** Python 3.12+, Django 5.2.8
+- **WSGI / Production Server:** Gunicorn 25.3.0
+- **Static File Handling:** WhiteNoise 6.12.0
+- **Frontend Stack:** HTML5, CSS3 (CSS Variables), JavaScript (ES6 Vanilla)
+- **Environment Handling:** `python-dotenv` 1.2.2
+- **Deployment Platform:** Render.com (Linux / Gunicorn WSGI)
+
+---
+
+## 📁 Project Directory Layout
+
+```text
+tax_consultant_site/
+├── core/                       # Primary app: Views, Forms, Models & Routes
+│   ├── admin.py                # Django Admin dashboard setup
+│   ├── forms.py                # Regex form validation rules
+│   ├── models.py               # ContactSubmission lead data model
+│   ├── urls.py                 # Core routing configurations
+│   └── views.py                # View handlers and email hooks
+├── static/                     # Custom static assets
+│   └── core/
+│       ├── css/style.css       # Design system & responsive layout
+│       └── js/main.js          # Calculators & interactive JS modules
+├── templates/                  # Frontend HTML templates
+│   ├── 404.html                # Custom 404 Page Not Found
+│   ├── 500.html                # Custom 500 Server Error
+│   └── core/                   # Base, index, about, calculator, contact, thank_you
+├── tax_consultant_site/        # Project settings & WSGI configuration
+├── .env                        # Environment variables (Ignored by Git)
+├── .gitignore                  # Git tracking exclusion rules
+├── manage.py                   # Django management script
+├── Procfile                    # WSGI launch command for Gunicorn
+└── requirements.txt            # Minimal Linux build dependencies
