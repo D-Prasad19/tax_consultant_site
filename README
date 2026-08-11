@@ -1,14 +1,14 @@
 <div align="center">
 
 # 🏛️ Prasad Consultancy
-### Tax Compliance, Advisory & GST Web Platform
+### Modern Tax Advisory, Financial Compliance & GST Web Platform
 
-[![Live Demo](https://prasad-consultancy.onrender.com)
+[![Live Platform](https://img.shields.io/badge/Live_Demo-prasad--consultancy.onrender.com-D97706?style=for-the-badge&logo=render&logoColor=white)](https://prasad-consultancy.onrender.com)
 [![Python Version](https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Django Version](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)](https://djangoproject.com)
 [![License](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)](LICENSE)
 
-*A production-ready Django web application built for **Prasad Consultancy** (Pimpri, Pune) featuring dynamic tax regime estimators, real-time GST calculators, validated lead capture, and a Charcoal & Bronze Gold corporate design system.*
+*A production-grade Django web application built for **Prasad Consultancy** (Pimpri, Pune) featuring dynamic tax regime estimators, real-time GST calculators, validated lead capture, and a Charcoal & Bronze Gold corporate design system.*
 
 [Explore Live Web App 🚀](https://prasad-consultancy.onrender.com) • [Report Issue 🐛](https://github.com/D-Prasad19/tax_consultant_site/issues)
 
@@ -16,40 +16,52 @@
 
 ---
 
+## 📖 Overview
+
+**Prasad Consultancy** is an end-to-end web platform designed to streamline tax compliance, financial advisory services, and client lead management for a premier consultancy firm based in Pimpri, Pune.
+
+The platform bridges complex tax laws with user-friendly financial tools—enabling salaried professionals, freelancers, and businesses to estimate tax liabilities, calculate real-time GST breakdowns, and request professional consultations in seconds.
+
+---
+
 ## 🌟 Key Features & Functional Modules
 
-### 🧮 1. Interactive Real-Time GST Calculator
-- Engine supporting both **GST Exclusive** and **GST Inclusive** tax breakdowns.
-- Instant computation of CGST, SGST, Total Tax liability, and Gross Payable amounts.
+### 🧮 1. Real-Time Interactive GST Calculator
+- Supports both **GST Exclusive** (adds tax to base price) and **GST Inclusive** (extracts tax from gross price) calculation models.
+- Provides real-time breakdown of CGST (9%), SGST (9%), Total Tax Liability, and Net Amount.
 
 ### 📊 2. Income Tax Regime Estimator (Old vs. New)
-- Comparative calculator evaluating gross annual income against eligible deductions (80C, 80D, HRA).
-- Automatically recommends the optimal tax regime with visual savings badges.
+- Interactive comparison engine evaluating gross annual income against eligible deductions (80C, 80D, HRA).
+- Automatically calculates net tax payable under both regimes and generates visual savings badges to guide user decision-making.
 
-### 📬 3. Validated Lead Generation & Inquiry System
-- Contact form equipped with custom regex phone validation and message length sanitization.
-- Automatic backend redirection to custom confirmation pages (`/thank-you/`) with persistent data storage.
+### 📬 3. Validated Lead Capture & Inquiry System
+- Built with custom backend regex validation for 10-digit Indian phone numbers and message sanitization.
+- Features URL query-based topic pre-selection (e.g., `?topic=itr`) and seamless redirection to dedicated confirmation routes (`/thank-you/`).
+- Direct integration with Django Admin for real-time lead tracking and review.
 
-### 🔐 4. Production Security Hardening
-- Built-in protection against **CSRF**, **XSS**, **Clickjacking**, and **SQL Injection**.
-- WhiteNoise static asset compression with dynamic environment variable configurations (`.env`).
+### 🔐 4. Enterprise Security & Performance Hardening
+- **Vulnerability Defense:** Built-in safeguards against CSRF, XSS, Clickjacking (`X-Frame-Options: DENY`), and SQL Injection (Django ORM parameterization).
+- **SSL / HTTPS Enforcement:** Production settings dynamically enforce HSTS headers (`SECURE_HSTS_SECONDS = 31536000`) and secure session/CSRF cookies.
+- **Static Asset Optimization:** WhiteNoise compression engine (`CompressedStaticFilesStorage`) for fast asset loading under Gunicorn WSGI.
 
 ### 🎨 5. Charcoal & Bronze Gold Design System
-- Luxury corporate palette managed via dynamic CSS variables.
-- Fully responsive navigation overlay with mobile sticky call-to-action bars.
+- Luxury corporate color palette (`#121826` Obsidian Charcoal base with `#D97706` Bronze Gold accents) managed via dynamic CSS variables.
+- Responsive mobile menu drawer, accordion-based FAQ interactions, and sticky mobile call-to-action bars.
 
 ---
 
 ## 🛠️ Tech Stack & Architecture
 
-| Layer | Technology |
-| :--- | :--- |
-| **Backend Framework** | Python 3.12+, Django 5.2.8 |
-| **WSGI / Web Server** | Gunicorn 25.3.0 |
-| **Static Assets Handling** | WhiteNoise 6.12.0 |
-| **Frontend Stack** | HTML5, CSS3 (CSS Variables), JavaScript (ES6 Vanilla) |
-| **Configuration** | `python-dotenv` 1.2.2 |
-| **Hosting & Deployment** | Render.com (Linux / Gunicorn WSGI) |
+| Layer | Technology | Description |
+| :--- | :--- | :--- |
+| **Backend Framework** | ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white) | Django 5.2.8 core routing, views, models, and forms |
+| **Language** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) | Python 3.12+ runtime execution |
+| **WSGI Web Server** | ![Gunicorn](https://img.shields.io/badge/Gunicorn-499848?style=flat-square&logo=gunicorn&logoColor=white) | Gunicorn 25.3.0 production server process |
+| **Static File Engine** | ![WhiteNoise](https://img.shields.io/badge/WhiteNoise-6.12.0-121826?style=flat-square) | WhiteNoise compressed static asset handler |
+| **Frontend Stack** | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) | Semantic HTML5, CSS Variables, Vanilla JS (ES6) |
+| **Database** | ![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4479A1?style=flat-square&logo=postgresql&logoColor=white) | SQLite (Development) / PostgreSQL compatible |
+| **Configuration** | `python-dotenv` | Isolated environment variable management |
+| **Cloud Hosting** | ![Render](https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black) | Render Web Service with automated Git CI/CD |
 
 ---
 
@@ -57,23 +69,27 @@
 
 ```text
 tax_consultant_site/
-├── core/                       # Primary application: Views, Forms, Models & Routes
-│   ├── admin.py                # Customized Django Admin panel
-│   ├── forms.py                # Regex form validation rules
-│   ├── models.py               # ContactSubmission lead data model
-│   ├── urls.py                 # Core routing configurations
-│   └── views.py                # View handlers and email hooks
-├── static/                     # Static assets directory
+├── core/                       # Primary application handling business logic
+│   ├── admin.py                # Customized Django Admin panel & filters
+│   ├── forms.py                # Regex form validation & sanitization rules
+│   ├── models.py               # ContactSubmission lead data schema
+│   ├── tests.py                # Automated unit tests for routes and forms
+│   ├── urls.py                 # Application level routing
+│   └── views.py                # View controllers & response handlers
+├── static/                     # Global static assets
 │   └── core/
-│       ├── css/style.css       # Design system & responsive layout
-│       └── js/main.js          # Calculators & interactive JS modules
-├── templates/                  # Frontend HTML templates
+│       ├── css/style.css       # Design system & responsive layout styles
+│       └── js/main.js          # Tax calculators & UI interactive scripts
+├── templates/                  # Modular Django HTML templates
 │   ├── 404.html                # Custom 404 Page Not Found
-│   ├── 500.html                # Custom 500 Server Error
-│   └── core/                   # Base, index, about, calculator, contact, thank_you
-├── tax_consultant_site/        # Project settings & WSGI configuration
-├── .env                        # Local environment variables (Ignored by Git)
-├── .gitignore                  # Git tracking exclusion rules
-├── manage.py                   # Django CLI management utility
-├── Procfile                    # WSGI launch command for Gunicorn
-└── requirements.txt            # Minimal production build dependencies
+│   ├── 500.html                # Custom 500 Internal Server Error
+│   └── core/                   # base, index, about, calculator, contact, thank_you
+├── tax_consultant_site/        # Project root configuration
+│   ├── settings.py             # Security, app middleware, & environment setup
+│   ├── urls.py                 # Root URL routing dispatcher
+│   └── wsgi.py                 # WSGI entry point for Gunicorn
+├── .env                        # Local environment secrets (Ignored by Git)
+├── .gitignore                  # Exclusion rules for local files and database
+├── manage.py                   # Django CLI utility
+├── Procfile                    # Web service execution command for production
+└── requirements.txt            # Minimal Linux build dependencies
