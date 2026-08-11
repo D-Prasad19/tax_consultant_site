@@ -1,64 +1,81 @@
 # 🏛️ Prasad Consultancy
 ### Modern Tax Advisory, Financial Compliance & GST Web Platform
 
-![Live App Badge](https://img.shields.io/badge/Live_App-prasad--consultancy.onrender.com-D97706?style=for-the-badge&logo=render&logoColor=white)
-![Python Badge](https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)
-![Django Badge](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)
-![License Badge](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)
+![Live Platform](https://img.shields.io/badge/Live_App-prasad--consultancy.onrender.com-D97706?style=for-the-badge&logo=render&logoColor=white)
+![Python Version](https://img.shields.io/badge/Python-3.12%2B-121826?style=for-the-badge&logo=python&logoColor=white)
+![Django Version](https://img.shields.io/badge/Django-5.2.8-092E20?style=for-the-badge&logo=django&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-FBBF24?style=for-the-badge)
 
 A production-ready web platform for **Prasad Consultancy** (Pimpri, Pune) featuring dynamic tax regime estimators, real-time GST calculators, lead generation workflows, and a custom Charcoal & Bronze Gold corporate design system.
 
-👉 **Live Web App:** https://prasad-consultancy.onrender.com
-👉 **GitHub Repository:** https://github.com/D-Prasad19/tax_consultant_site
+🌐 **Live Platform:** https://prasad-consultancy.onrender.com  
+🐙 **GitHub Repo:** https://github.com/D-Prasad19/tax_consultant_site  
 
 ---
 
-## ⚡ Core Highlights
-
-* **🧮 Real-Time GST Engine:** Supports both GST Exclusive and GST Inclusive calculations. Instantly computes CGST, SGST, Total Tax liability, and Net Payable amounts.
-* **📊 Tax Regime Estimator:** Evaluates gross income against eligible deductions (80C, 80D, HRA) and generates visual savings badges for Old vs. New Tax Regimes.
-* **📬 Validated Lead Capture:** Contact form equipped with custom regex 10-digit Indian phone validation, message sanitization, and direct persistence in Django Admin.
-* **🎨 Charcoal & Bronze UI:** Built with a luxury corporate palette (Obsidian Charcoal base with Bronze Gold accents) and responsive mobile drawers.
-
----
-
-## 🛠️ Technology Stack
-
-* **Backend Framework:** Python 3.12+, Django 5.2.8
-* **Web Server & Assets:** Gunicorn 25.3.0, WhiteNoise static asset handler
-* **Frontend Interface:** Semantic HTML5, CSS Variables, Vanilla JavaScript (ES6)
-* **Security & Config:** python-dotenv, CSRF Protection, XSS Auto-escaping, SSL Enforcement
-* **Cloud Infrastructure:** Render Web Service
+## 📑 Table of Contents
+- [Executive Summary](#-executive-summary)
+- [Key Features & Calculators](#-key-features--calculators)
+- [Technology & Architecture](#-technology--architecture)
+- [Project Directory Layout](#-project-directory-layout)
+- [Local Development Setup](#-local-development-setup)
+- [Cloud Deployment & Hosting](#-cloud-deployment--hosting)
+- [Contact & Firm Profile](#-contact--firm-profile)
 
 ---
 
-## 📁 Repository Structure
+## 📌 Executive Summary
 
-* **core/**: Primary Django app handling routing, lead models, forms, and business logic.
-* **static/core/**: Stylesheets (`style.css`) and interactive scripts (`main.js`).
-* **templates/core/**: HTML templates for base layout, index, about, calculator, contact, and thank-you pages.
-* **tax_consultant_site/**: Root project settings, WSGI server entry point, and main URL routing.
+Prasad Consultancy's web application streamlines client onboarding, tax estimation, and lead capture for individuals and corporate clients. Designed with a luxury **Charcoal & Bronze Gold** visual hierarchy, the platform delivers high security (CSRF protection, XSS escaping, SSL enforcement) and optimized static asset delivery via WhiteNoise.
 
 ---
 
-## 🚀 Quickstart & Local Setup
+## ⚡ Key Features & Calculators
 
-1. **Clone the Repository:** Run `git clone https://github.com/D-Prasad19/tax_consultant_site.git` in your terminal.
-2. **Virtual Environment:** Create a `.venv` virtual environment and activate it.
-3. **Install Packages:** Install dependencies from `requirements.txt`.
-4. **Environment File:** Create a `.env` file with `DJANGO_SECRET_KEY`, `DJANGO_DEBUG=True`, and `ALLOWED_HOSTS=127.0.0.1,localhost`.
-5. **Run Server:** Execute `python manage.py migrate` followed by `python manage.py runserver 8080` and visit `http://127.0.0.1:8080/`.
+### 🧮 1. Real-Time GST Engine
+- Supports **GST Exclusive** (tax added onto base price) and **GST Inclusive** (tax extracted from gross total) modes.
+- Calculates CGST (9%), SGST (9%), Total Tax Liability, and Net Payable amounts dynamically.
 
----
+### 📊 2. Income Tax Regime Estimator (Old vs. New)
+- Evaluates gross annual income against eligible tax deductions under Section 80C, 80D, and HRA.
+- Compares tax liabilities under both regimes and generates visual savings badges to guide decision-making.
 
-## 📍 Contact & Firm Information
-
-* **Firm Name:** Prasad Consultancy
-* **Office Address:** B 101 Shree Vinayak Residency, Vaibhav Nagar, Pimpri, Pune - 411017
-* **Phone:** +91 94202 01981
-* **Email:** softt@gmail.com
-* **Core Offerings:** ITR Filing, GST Registration & Returns, Business Incorporation, Tax Audits, Financial Advisory
+### 📬 3. Validated Lead Generation
+- Integrated contact form featuring backend regex validation for 10-digit Indian mobile numbers.
+- Auto-sanitizes input, captures client requests, and saves leads directly to the Django Admin panel.
 
 ---
 
-*Maintained with ❤️ by **D-Prasad19***
+## 🛠️ Technology & Architecture
+
+### Backend Core
+- **Language & Framework:** Python 3.12+, Django 5.2.8
+- **WSGI App Server:** Gunicorn 25.3.0
+- **Static Assets:** WhiteNoise 6.12.0
+- **Environment Management:** `python-dotenv` 1.2.2
+
+### Frontend Interface
+- **Markup & Styling:** HTML5, CSS Variables (`#121826` Charcoal Base, `#D97706` Bronze Gold Accents)
+- **Scripting:** Vanilla JavaScript (ES6) for interactive tax calculators
+
+### Production & Hosting
+- **PaaS Host:** Render.com (Linux / Python WSGI Runtime)
+- **Database:** SQLite (Development) / PostgreSQL compatible (Production)
+
+---
+
+## 📁 Project Directory Layout
+
+- **`core/`**: Primary application handling routes, models (`ContactSubmission`), custom forms, and template rendering.
+- **`static/core/`**: Compressed CSS stylesheets (`style.css`) and interactive calculator scripts (`main.js`).
+- **`templates/core/`**: Modular HTML templates including base layouts, index, GST calculator, contact form, and thank-you pages.
+- **`tax_consultant_site/`**: Project settings (`settings.py`), root URL routes, and WSGI entry point.
+
+---
+
+## 🚀 Local Development Setup
+
+### 1. Clone & Navigate
+```bash
+git clone [https://github.com/D-Prasad19/tax_consultant_site.git](https://github.com/D-Prasad19/tax_consultant_site.git)
+cd tax_consultant_site
